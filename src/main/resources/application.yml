@@ -9,8 +9,8 @@ spring:
     producer:
       bootstrap-servers: localhost:9092
       group-id: emergency-group
-      key-deserializer: com.example.OrderInfoSerializer
-      value-deserializer: com.example.config.OrderInfoSerializer
+      key-serializer: com.example.OrderInfoSerializer
+      value-serializer: com.example.OrderInfoSerializer
 
   # Topic name
 topic:
