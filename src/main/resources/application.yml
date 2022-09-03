@@ -1,0 +1,23 @@
+
+# Common properties spring
+server:
+  port: 9001
+
+  # Kafka Consumer properties
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      group-id: emergency-group
+      key-deserializer: com.example.OrderInfoSerializer
+      value-deserializer: com.example.config.OrderInfoSerializer
+
+  # Topic name
+topic:
+  name: quickstart
+
+  # Common Kafka Properties
+auto:
+  create:
+    topics:
+      enable: true
